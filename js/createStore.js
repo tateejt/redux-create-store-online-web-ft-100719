@@ -34,7 +34,7 @@ function render() {
 
 dispatch({ type: '@@INIT' })
 let button = document.getElementById('button');
-
-button.addEventListener('click', function() {
-    dispatch({ type: 'INCREASE_COUNT' });
+ 
+button.addEventListener('click', () => {
+    store.dispatch({ type: 'INCREASE_COUNT' });
 })
