@@ -32,7 +32,9 @@ function render() {
   container.textContent = store.getState().count;
 };
 
-dispatch({ type: '@@INIT' })
+let store = createStore(reducer)
+
+store.dispatch({ type: '@@INIT' });
 let button = document.getElementById('button');
  
 button.addEventListener('click', () => {
