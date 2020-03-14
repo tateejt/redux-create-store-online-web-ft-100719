@@ -1,12 +1,19 @@
 function createStore() {
   let state;
-  
-  function dispatch(action){
-  state = reducer(state, action);
-  render();
+ 
+  function dispatch(action) {
+    state = reducer(state, action);
+    render();
+  }
+ 
+  function getState() {
+    return state;
+  }
+ 
+  return {
+    dispatch,
+    getState
   };
-  
-  return { dispatch };
 };
 
 function reducer(state = { count: 0 }, action) {
